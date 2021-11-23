@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xamarin_MetroEvents.ViewModels"
+             x:Class="Xamarin_MetroEvents.Views.FirstPage">
+    <ContentPage.BindingContext>
+        <local:FirstPageVM></local:FirstPageVM>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#000" Padding="24" CornerRadius="0">
+                <Label Text="Welcome to MetroEvents" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="Join now" FontSize="Title" Padding="30,10,30,10"/>
+            <Label Text=" an application designed to help everyone organize and join events. The idea is to have a way people connect to each other publicly. No invitations needed." FontSize="16" Padding="30,0,30,0"/>
+            <Button  x:Name="toFirst" Text="START" Command="{Binding ToSecond}"
+                HorizontalOptions="Center" />
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

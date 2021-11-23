@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xamarin_MetroEvents.ViewModels"
+             x:Class="Xamarin_MetroEvents.Views.SecondPage">
+    <ContentPage.BindingContext>
+        <local:SecondPageVM></local:SecondPageVM>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="The Second Page"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Name, Mode=TwoWay}" x:Name="lblName"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="To Third Page" Command="{Binding ToThird}"/>
+            <Button Text="Exit" Command="{Binding ExitMe}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
